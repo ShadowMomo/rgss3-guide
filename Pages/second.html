@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>&gt;&gt;&gt;[面向对象的编程之基础概念]</title>
+<meta name="description" content="为零基础和有一定基础的人提供的RGSS3指导。">
+<meta name="keywords" content="Shadow Momo, Momo, RGSS3, Guide, RMVA, RPG Maker, RPG, VA, RM">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="image/icon" href="https://shadowmomo.github.io/resources/common/favicon.ico">
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1>面向对象的编程之基础概念</h1>
+
+<p><a href="https://shadowmomo.github.io/rgss3-guide/first.html">上一节</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/">返回目录</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/third.html">下一节</a></p>
+
+<hr><h3>基础概念 真的只有概念 又长又冗杂</h3>
+
+<p><strong>方法</strong>就是做一件事情所使用的方法</p>
+
+<p><strong>对象</strong>就是可以做事情的的主体</p>
+
+<p><strong>类</strong>就是一个以<em>能够处理的方法</em>对<em>对象</em>所进行的分类 </p>
+
+<p>这还是有点以理解，这样你就懂了：</p>
+
+<blockquote>
+<p><em>李华做物理实验</em></p>
+</blockquote>
+
+<p><em>李华</em>是一个对象，<em>做</em>是一个方法，<em>物理实验</em>是方法的<strong>参数</strong>（至于参数，我们稍后再讲）</p>
+
+<p>把一个事件用一句话说出来，一般名词是对象，动词是方法，宾语是参数</p>
+
+<blockquote>
+<p>如果要<em>做物理实验</em>，应该让谁来？应该是<em>懂物理知识的人</em></p>
+</blockquote>
+
+<p>这里<em>懂物理知识的人</em>就是一个类</p>
+
+<blockquote>
+<p><em>李华</em>是一个<em>红星中学高二一班的好学生</em>，而<em>红星中学高二一班的好学生</em>都是<em>懂物理知识的人</em></p>
+</blockquote>
+
+<p>这种情况，我们说：<em>李华</em>的类是<em>红星中学高二一班的好学生</em></p>
+
+<p>而<em>红星中学高二一班的好学生</em>的<strong>父类</strong>(也叫基类、超类)是<em>懂物理知识的人</em></p>
+
+<p>反过来说，类<em>懂物理知识的人</em>的<strong>子类</strong>(也叫派生类)<strong>之一</strong>是<em>红星中学高二一班的好学生</em></p>
+
+<p>为什么要说“之一”呢？</p>
+
+<p>因为一个类只能有一个父类，而一个父类可以有多个子类<del>不要问我它妈是谁</del></p>
+
+<p>有一件显而易见的事：红星中学高二一班的好学生不止李华一个，所以说<em>李华</em>是<em>红星中学高二一班的好学生</em>的一个实际例子</p>
+
+<p>你要红星中学高二一班的好学生？行啊！这里就有一个例子：李华</p>
+
+<p>于是，我们说：对象<em>李华</em>是类<em>红星中学高二一班的好学生</em>的一个<strong>实例</strong></p>
+
+<h3>好 现在让我们回顾一下这些概念</h3>
+
+<p>方法 对象 类 参数 实例 父类 子类</p>
+
+<p>回顾完毕</p>
+
+<h3>这些东西有什么意义</h3>
+
+<p>理解这些东西，可以让脚本的逻辑结构更清晰——这是不言而喻的</p>
+
+<p>更重要的是，这种模型可以让脚本编写更加简单</p>
+
+<p>~~~最重要的是……ruby是一门面向对象的语言，RGSS3是建立在ruby上的，RGSS3的原装脚本是用这种思想写的 不用不行啊~~~</p>
+
+<p>忽略上面那句，说点实际的：</p>
+
+<p>方法的作用很简单明了，假设没有方法，而想要<em>扔肥皂</em>给<a href="https://github.com/fux2" class="user-mention">@fux2</a> 和@咕噜 我们得这样：</p>
+
+<pre><code>从肥皂盒里拿出一块肥皂
+瞄准@fux2 的脚下
+抬手，把肥皂扔出去
+从肥皂盒里拿出一块肥皂
+瞄准@咕噜 的脚下
+抬手，把肥皂扔出去
+</code></pre>
+
+<p>倘若我们以后还要再扔其他人，就必须再写一遍，如果有方法</p>
+
+<pre><code># 目标是参数
+定义方法 扔肥皂给(目标)
+  从肥皂盒里拿出一块肥皂
+  瞄准目标的脚下
+  抬手，把肥皂扔出去
+结束定义
+</code></pre>
+
+<p>我们就可以这样：</p>
+
+<p><code>扔肥皂给( @fux2 )</code>和<code>扔肥皂给( @咕噜 )</code>。</p>
+
+<p>以后我们还可以<code>扔肥皂给( @好男人 )</code>。</p>
+
+<p>至于类呢？</p>
+
+<p>考虑这样一个方法：</p>
+
+<p><strong>工作</strong></p>
+
+<p>它应该是怎样的一个方法，会干什么？</p>
+
+<p>…………</p>
+
+<p>……………………</p>
+
+<p>………………………………</p>
+
+<p>对于不同的人（对象），同样的方法有不同的诠释</p>
+
+<p>我们可以为每个人写一个方法：你是这样工作的 他是这样工作的 blablablabla...</p>
+
+<p>但是我们会发现，总有一些人，他们工作的方法是一样的</p>
+
+<p>把他们作为一类</p>
+
+<p>（以<code>#</code>开头的是注释 不影响实际的效果）</p>
+
+<pre><code>定义类 清洁工
+  定义方法 工作
+    说 我不知道我要干什么
+  结束定义
+  定义方法 休息
+    说 我在休息
+  结束定义
+结束定义
+#-------
+定义类 擦黑板的 父类是 清洁工
+  定义方法 工作
+    洗拖把
+    前拖拖
+    后拖拖
+    里拖拖
+    外拖拖
+  结束定义
+结束定义
+#-------
+定义类 扫地的 父类是 清洁工
+  定义方法 工作
+    洗抹布
+    左擦擦
+    右擦擦
+    上擦擦
+    下擦擦
+  结束定义
+结束定义
+</code></pre>
+
+<p>然后</p>
+
+<pre><code>李华的同学甲 是 一个扫地的 并且 李华的同学乙 是 一个擦黑板的
+李华的同学甲工作 并且 李华的同学乙休息
+</code></pre>
+
+<p>好吧我受够了：</p>
+
+<div class="highlight highlight-ruby"><pre><span class="p">(</span><span class="n">classmateA</span> <span class="o">=</span> <span class="no">Sweeper</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">classmateB</span> <span class="o">=</span> <span class="no">Wiper</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
+<span class="n">classmateA</span><span class="o">.</span><span class="n">work</span> <span class="ow">and</span> <span class="n">classmateB</span><span class="o">.</span><span class="n">rest</span>
+</pre></div>
+
+<p>能看懂吧？</p>
+
+<p>What? and不是这么用的？……我们后面再说。</p>
+
+<p>话归正传，在这个例子中，我们看到了<strong>继承</strong>，继承指的是由父类变出子类的过程，定义一个类的同时，声明它的父类，就完成了继承</p>
+
+<p>对了 不要关心为什么上面那个扫地的在擦黑板，而擦黑板的坐着休息 他与她在谈恋爱</p>
+
+<h3>注意啦 现在开始用英文写脚本了</h3>
+
+<p>定义类，使用<code>class</code>，这个英文单词本身就是类的意思</p>
+
+<p>声明父类，使用左尖括号<code>&lt;</code>，有点像个箭头，由父类指向子类，表示派生</p>
+
+<p>定义方法，使用<code>def</code>，英文全名是define，定义的意思，但只用来定义方法</p>
+
+<p>结束定义统一是<code>end</code>，英文结束的意思</p>
+
+<p>把上面的俩苦逼同学再写一遍</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1"># 清洁工</span>
+<span class="k">class</span> <span class="nc">Cleaner</span> <span class="c1"># 这个Cleaner是名字 必须是大写字母开头想必不用我说</span>
+  <span class="k">def</span> <span class="nf">work</span> <span class="c1"># 方法名 可以是小写字母、汉字或下划线开头</span>
+    <span class="nb">puts</span> <span class="s2">"我不知道我要干什么"</span>
+  <span class="k">end</span>
+  <span class="c1"># puts是什么？</span>
+  <span class="c1">#  向控制台写文字的方法 它会把它的参数写下来</span>
+  <span class="c1"># 为什么这里的[我不知道我要干什么]加了双引号？</span>
+  <span class="c1">#  你要让电脑明白：这是一句话，不是用来执行的脚本</span>
+  <span class="k">def</span> <span class="nf">rest</span>
+    <span class="nb">puts</span> <span class="s2">"我在休息"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1">#------</span>
+<span class="c1"># 擦黑板的</span>
+<span class="k">class</span> <span class="nc">Wiper</span> <span class="o">&lt;</span> <span class="no">Cleaner</span> <span class="c1"># 这就是上面那个Cleaner</span>
+  <span class="k">def</span> <span class="nf">work</span>
+    <span class="c1"># 洗拖把</span>
+    <span class="c1"># 拖来拖去 # 这些方法我就不再一一实现了</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1">#------</span>
+<span class="c1"># 扫地的</span>
+<span class="k">class</span> <span class="nc">Sweeper</span> <span class="o">&lt;</span> <span class="no">Cleaner</span>
+  <span class="k">def</span> <span class="nf">work</span>
+    <span class="c1"># 洗抹布</span>
+    <span class="c1"># 擦来擦去</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>这里出现了三个同名的方法：<code>work</code> <code>work</code> 和 <code>work</code>，其实这里暗藏玄机哦~</p>
+
+<p>第一个<code>work</code> 作为第一次出现的方法，没什么特殊的</p>
+
+<p>第二个<code>work</code> 它出现在<code>Wiper</code>内部，而<code>Wiper</code>是<code>Cleaner</code>的子类</p>
+
+<p>很显然，父类有的方法，子类一定有，不然我要<strong>继承</strong>干什么？在这里，你可以看做是<code>Wiper</code>的内部出现了第二次<code>work</code>的定义</p>
+
+<p>这个定义会覆盖掉之前的定义，这样<code>Wiper</code>有了它独有的<code>work</code></p>
+
+<p>第三个<code>work</code> 在<code>Sweeper</code>内，也是<code>Cleaner</code>的子类，同理覆盖了从第一个<code>work</code>里继承来的内容</p>
+
+<p>所以，三个类，有了三个不同的<code>work</code></p>
+
+<p>…………</p>
+
+<p>……………………</p>
+
+<p>………………………………</p>
+
+<p>好吧，不要打我，就是这么简单，可能我说的有点绕……</p>
+
+<p>你们可以想到，<code>rest</code>虽然只出现了一次，但是三个类中都是有这个东西的</p>
+
+<h3>简单的讲一讲模块</h3>
+
+<p>在上面，我们看到，<em>李华</em>是<em>红星中学高二一班的好学生</em>，而<em>红星中学高二一班的好学生</em>都是<em>懂物理知识的人</em>，我们要<em>做物理实验</em>需要<em>懂物理知识的人</em>所以李华可以胜任。</p>
+
+<p>（某对象o属于某类A，某类A的父类是某类B，某类B具有某实例方法m，所以对象o具有方法m）</p>
+
+<p>但是，如果我们现在要<em>调查北京市2006-2011年全市狗尾巴草种群数量变化</em>，需要<em>懂生物知识的人</em>，李华也懂生物，所以我们让他的某个祖先类为<em>懂生物知识的人</em>………………</p>
+
+<p>好像哪里不对劲？</p>
+
+<p>我们刚才已经说过，某个类只能有一个父类，这个父类当然也是一个类，它也只能有一个父类……层层下去，关系应该是这样的（<code>&lt;</code>的左边是子类 右边是父类）</p>
+
+<p>子类 &lt; 父类 &lt; 父类的父类 &lt; 父类他爷爷 &lt; ...... &lt; 祖先类 &lt; ...... (&lt; Object)</p>
+
+<p>后面那个Object不需要理解，但是你们应该猜得到，它是一个类，是所有类的父类或祖先类</p>
+
+<p>现在，我们看到，李华的类的父类是<em>懂物理知识的人</em>，而现在他的某一个祖先类是<em>懂生物知识的人</em>…………</p>
+
+<p>难道说，所有<em>懂物理知识的人</em>都是<em>懂生物知识的人</em>？或者所有<em>懂生物知识的人</em>都是<em>懂物理知识的人</em>？</p>
+
+<p>坑爹呢你是</p>
+
+<p>因为我们没有办法把这两个类并排（某个类只能有一个老爸，别管干爹了…………都说了不要问他妈是谁！），而且李华肯定不止拥有这两种能力，比如说，李华还是个<em>学生</em></p>
+
+<p>这时，我们应该选择最能代表事物根本属性的类作为父类，将另外的作为<strong>模块</strong>（终于讲到你了）</p>
+
+<p>在模块中，我们可以像在类中一样定义方法，但是<strong>模块不能创建对象</strong></p>
+
+<p>在这里，我们的<em>李华</em>属于类<em>A红星中学高二一班的学生</em>（问什么在前面加个A？我说过的，类名必须以大写字母开头），这个类应该是这样的继承下来：</p>
+
+<p>红星中学高二一班的学生 &lt; 红星中学高二年级的学生 &lt; 红星中学的学生 &lt; 高中生 &lt; 学生 &lt; 青少年 &lt; 超人</p>
+
+<p>与此同时，应该在其中的某个类中<strong>混入</strong>模块</p>
+
+<p>当我们向某个类A中混入模块M，在M中定义的所有方法，A也能拥有</p>
+
+<p>模块的混入没有限制，想要几个就要几个</p>
+
+<p>这里，我们要把<em>懂物理知识的人</em>作为模块，<em>懂生物知识的人</em>做为另一个模块，把它们混入<em>红星中学高二一班的学生</em>中，因为红星中学高二一班的学生都懂这些东西，而红星中学高二年级的学生不一定都懂，好班级就是不一样(打死)</p>
+
+<p>而且这样还有个好处：当某个老师需要这种能力的时候，我们只需要混入这两个模块，而不需要更改学生或老师的继承结构</p>
+
+<p>声明模块 使用<code>module</code></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">module</span> <span class="nn">KnowPhysics</span> <span class="c1"># 模块的名字也必须以大写字母开头</span>
+ <span class="c1"># 懂物理</span>
+  <span class="k">def</span> <span class="nf">do_physics_experiment</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># 做物理实验</span>
+    <span class="c1"># 出现了新的关键词 case</span>
+    <span class="k">case</span> <span class="n">data</span> <span class="c1"># 这个data是上面的data</span>
+    <span class="k">when</span> <span class="s2">"复述质能方程"</span>
+      <span class="nb">puts</span> <span class="s2">"E = mc&lt;sup&gt;2&lt;/sup&gt;"</span>
+      <span class="c1"># 还记得puts吗？</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">"我不会"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1">#-----</span>
+<span class="k">module</span> <span class="nn">KnowBiology</span> <span class="c1"># 懂生物</span>
+  <span class="k">def</span> <span class="nf">do_biology_research</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># 做生物调查</span>
+    <span class="nb">puts</span> <span class="s2">"我不会</span><span class="si">#{</span><span class="n">data</span><span class="si">}</span><span class="s2">"</span> <span class="c1"># 这里的写法你们将会很熟悉</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1">#-----</span>
+<span class="c1"># 红星中学高二一班的学生 &lt; 红星中学高二年级的学生</span>
+<span class="k">class</span> <span class="nc">StudentInRedStarMiddleSchoolGradeTwoClassOne</span> <span class="o">&lt;</span> <span class="no">StudentInRedStarMiddleSchoolGradeTwo</span>
+  <span class="c1"># 后面这个父类我就不再定义了</span>
+  <span class="c1"># 开始混入模块</span>
+  <span class="kp">include</span> <span class="no">KnowPhysics</span>
+  <span class="kp">include</span> <span class="no">KnowBiology</span>
+  <span class="c1"># 这样就混入了</span>
+  <span class="c1"># 下面的方法有两个参数</span>
+  <span class="k">def</span> <span class="nf">do</span><span class="p">(</span><span class="n">what</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="k">case</span> <span class="n">what</span>
+    <span class="k">when</span> <span class="s2">"物理实验"</span>
+      <span class="n">do_physics_experiment</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">when</span> <span class="s2">"生物调查"</span>
+      <span class="n">do_biology_research</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s2">"我不会"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1">#</span>
+<span class="no">Lihua</span> <span class="o">=</span> <span class="no">StudentInRedStarMiddleSchoolGradeTwoClassOne</span><span class="o">.</span><span class="n">new</span>
+<span class="no">Lihua</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="s2">"物理实验"</span><span class="p">,</span> <span class="s2">"复述质能方程"</span><span class="p">)</span>
+<span class="c1">#=&gt; E = mc&lt;sup&gt;2&lt;/sup&gt;</span>
+</pre></div>
+
+<p>什么？做物理实验和复述质能方程有什么关系？你不知道现在的高中生做的实验都是黑板实验吗？</p>
+
+<h1>厌倦了这些理论吗？我们直接来实践吧~</h1>
+
+<hr>
+
+<p><a href="https://shadowmomo.github.io/rgss3-guide/first.html">上一节</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/">返回目录</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/third.html">下一节</a></p>
+
+<div id="contact">
+<p>Author: Shadow Momo<br>
+Last Modified: 2014/6/26 13:40:46 </p>
+</div>
+</body>
+</html>

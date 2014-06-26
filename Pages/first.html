@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>&gt&gt&gt[RGSS3]</title>
+<title>&gt;&gt;&gt;[预备部分]</title>
 <meta name="description" content="为零基础和有一定基础的人提供的RGSS3指导。">
 <meta name="keywords" content="Shadow Momo, Momo, RGSS3, Guide, RMVA, RPG Maker, RPG, VA, RM">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -388,28 +388,137 @@ vertical-align:1px;
 </style>
 </head>
 <body>
-<div>
-<h1>于是乎我为什么要来这里呢？我要说什么呢？</h1>
-<p>…………
-<p>………………
-<p>…………………………
-<p>………………………………
-<p>………………………………………………
-<p>啊呜……
-</div>
+<h1>预备部分</h1>
 
-<hr>
-<div id="pagelist">
-<ol>
-<li><a href="https://shadowmomo.github.io/rgss3-guide/first.html">预备部分</a></li>
-<li><a href="https://shadowmomo.github.io/rgss3-guide/second.html">面向对象的编程之基础概念</a></li>
-<li>未完待续…………</li>
-</ol>
-</div>
-<hr>
+<p><a href="https://shadowmomo.github.io/rgss3-guide/">返回目录</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/second.html">下一节</a></p>
+
+<hr><ul class="task-list">
+<li>
+<p>我自认为已经掌握了《RGSS 3 入门教程大家写》的大部分内容，可不可以测试一下我的掌握程度？我应该回去巩固基础还是在这里继续学习？</p>
+
+<blockquote>
+<p><del>学无止境。</del>这个直接找人出一套测试题吧~</p>
+</blockquote>
+</li>
+<li>
+<p>当我见到看不懂的代码时，我应该依次到哪里寻求帮助？</p>
+
+<blockquote>
+<p>当你读其他的脚本，遇到了不懂的地方，首先要确保<strong>你大概了解了这个脚本的逻辑结构，可能你看不懂的原因是因为详细的内容在脚本的后面</strong>。</p>
+
+<p>如果你只是对某句脚本的语法不大清楚，你应该自己猜想、尝试仿写一下，看看结果和你的预期有什么不同。</p>
+
+<p>有irb的开irb，没有irb开RM新工程也凑合，善用<code>p</code>、<code>msgbox</code>之类的方法，再不明白就勇敢的发帖提问，VA提问区或者技术讨论区（如果还在的话）都可以。</p>
+
+<p>如果你对脚本中出现的某个方法不熟悉，你应该首先确定方法的位置：是在RGSS3中定义的，还是在ruby基本库中定义的？（有时候甚至是作者自己定义的）然后查找F1帮助手册（VA的帮助手册只汉化了脚本部分，不过基础部分与VX是共通的，而且对我们没有影响，可以在<a href="http://pan.baidu.com/s/1sjDF5U1">这里</a>下载）。</p>
+
+<p>当然，也可以查阅ruby参考手册（汉化版<a href="http://www.kuqin.com/rubycndocument/man/">见此</a>，ruby版本1.8.1，官方英文版<a href="http://ruby-doc.org/core-1.9.2/">见此</a>，ruby版本1.9.2，RGSS3采用的是r1.9.2，但是很多地方与1.8.1都是共通的）。</p>
+
+<p>在库中找到你要的方法后，应该实际应用几次以加深印象。</p>
+</blockquote>
+</li>
+<li>
+<p>要提高我的脚本水平和对代码的理解，我应该多读脚本还是多写脚本？为什么？</p>
+
+<blockquote>
+<p>多写脚本。实践出真知，读的知识很容易忘，这就像做数学题和看例题的区别。</p>
+
+<p>写一些简单的脚本，轻轻松松，又加深印象又有成就感，很容易激励人继续往下学习。一开始就玩大工程很容易受挫。</p>
+
+<p>有时候看看那些角虫们写的大工程，一些算法和思路还是很有指导意义的。</p>
+</blockquote>
+</li>
+<li>
+<p>别人写的脚本好多行前面都有空格，都有什么用？我每行前面应该打多少空格？</p>
+
+<blockquote>
+<p>当我们写一篇作文的时候，在每个段落的开头都要空两格，也就是<strong>缩进</strong>。</p>
+
+<p>在脚本中，缩进用于提供代码的视觉组织，<strong>空行</strong>也有类似的功能。</p>
+
+<p>应该为不同逻辑层次的代码提供不同长度的缩进，用空行把同一层次中、不同语义的代码区分开。</p>
+
+<p>（实际上，这两点是一致的）</p>
+
+<p>至于应该打多少空格…………</p>
+
+<p>根据逻辑层次的深浅，决定缩进的长度，最外层不缩进，每进入一层，将缩进增加一个恒定的值</p>
+
+<p>这个恒定的值，我们推荐：<strong>两个空格</strong></p>
+
+<p>为什么是俩空格呢？</p>
+
+<p>当你在网络上搜寻ruby的推荐规范，他们都会告诉你，使用<em>软tab</em>，不要用<em>硬tab</em>（了解一下就够了），硬tab指的是你用键盘<code>Q</code>键左边那家伙打出来的缩进，软tab指的是用<code>空格</code>打出来的缩进，一般是两空格，少了效果不明显，多了打得费劲。</p>
+
+<p>而且RGSS原装脚本都是俩空格…………当年我什么都不懂的时候，就是这样学会了缩进的。</p>
+
+<p>顺便一提，在RM自带的脚本编辑器中，就算你用想硬tab，它会自动转换为两个空格的软tab缩进，所以Tab毫无压力</p>
+</blockquote>
+</li>
+<li>
+<p>我该在什么时候使用注释？应该注释什么内容？</p>
+
+<blockquote>
+<h4>什么时候用注释</h4>
+
+<p>注释的目的之一是<strong>备忘</strong>：设想，你写了一个漂亮的任务系统发布在技术区，@怪蜀黍 给了你500糖。</p>
+
+<p>一个月之后你收到一个来自<a href="https://github.com/taroxd" class="user-mention">@taroxd</a> 的新提醒说发现了一个BUG，于是你打开你的工程开始修改……</p>
+
+<p>………………</p>
+
+<p>…………………………</p>
+
+<p>……………………………………</p>
+
+<p>你发现你已经看不懂你自己的代码了，你忘了一个叫做<code>fuck_i_hate_it</code>的方法是干什么用的，你不记得为什么类<code>Daddy</code>会出现在这里，你想不起来为什么这里要用<code>class_eval</code>………………</p>
+
+<p>这是一种目的，另外一种目的是<strong>说明</strong>，当你把你的脚本共享出来，就算你在发布帖写了详尽的说明，但是不要忘了，有各种意外情况比如<strong>从来不看发布帖使用说明的人</strong>和<strong>转载</strong></p>
+
+<h4>在哪里注释 注释什么内容</h4>
+
+<p>原装脚本的注释方法是推荐的</p>
+
+<p>在一个类的开头，这样注释，简短的说明类的功能</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1">#=======================</span>
+<span class="c1"># ** Window_Greet</span>
+<span class="c1">#-----------------------</span>
+<span class="c1">#  用于展示问候语的窗口</span>
+<span class="c1">#=======================</span>
+</pre></div>
+
+<p>在一个方法的开头，这样注释，说明方法的功能</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1">#---------------------</span>
+<span class="c1"># * 描绘问候语</span>
+<span class="c1">#---------------------</span>
+</pre></div>
+
+<p>在方法内部 如果过程过长 除了考虑<strong>空行分组</strong> 还可以加上注释 说明具体操作目的</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">def</span> <span class="nf">some_meth</span>
+  <span class="c1"># 初始化</span>
+  <span class="vi">@some_attr</span> <span class="o">||=</span> <span class="p">{}</span>
+  <span class="c1"># 查找指定项</span>
+  <span class="n">f</span> <span class="o">=</span> <span class="n">find_something</span>
+  <span class="k">if</span> <span class="n">f</span> <span class="c1"># 如果存在</span>
+    <span class="c1"># 执行操作并返回结果</span>
+    <span class="n">operate_with</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+  <span class="k">else</span> <span class="c1"># 如果不存在</span>
+    <span class="c1"># 返回替代品</span>
+    <span class="n">alt</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</blockquote>
+</li>
+</ul><hr>
+<p><a href="https://shadowmomo.github.io/rgss3-guide/">返回目录</a> ~ <a href="https://shadowmomo.github.io/rgss3-guide/second.html">下一节</a></p>
 
 <div id="contact">
-<p>Author: <a href="mailto: shadowmomo@live.cn">Shadow Momo</a></p>
+<p>Author: Shadow Momo<br>
+Last Modified: 2014/6/26 13:27:22 </p>
 </div>
 </body>
 </html>
