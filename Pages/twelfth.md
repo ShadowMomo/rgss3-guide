@@ -1,4 +1,4 @@
-# 再来看看RGSS内建类 #
+# 再来看看ruby内建类 #
 [上一节](https://shadowmomo.github.io/rgss3-guide/p/eleventh.html) ~ [返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/p/thirteenth.html)
 
 ---
