@@ -1,5 +1,5 @@
 # 预备部分 #
-[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/second.html)
+[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/p/second.html)
 
 ---
 - 我自认为已经掌握了《[RGSS3 入门教程大家写](http://rm.66rpg.com/thread-249826-1-1.html)》的大部分内容，可不可以测试一下我的掌握程度？我应该回去巩固基础还是在这里继续学习？
@@ -102,7 +102,7 @@
 > ```
 
 ---
-[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/second.html)
+[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/p/second.html)
 
 Author: Shadow Momo
 Last Modified: 2014/6/26 13:27:22 

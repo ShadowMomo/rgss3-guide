@@ -1,5 +1,5 @@
 # 面向对象的编程之基础概念 #
-[上一节](https://shadowmomo.github.io/rgss3-guide/first.html) ~ [返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/third.html)
+[上一节](https://shadowmomo.github.io/rgss3-guide/p/first.html) ~ [返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/p/third.html)
 
 ---
 ### 基础概念 真的只有概念 又长又冗杂 ###
@@ -311,7 +311,7 @@ Lihua.do("物理实验", "复述质能方程")
 # 厌倦了这些理论吗？我们直接来实践吧~ #
 
 ---
-[上一节](https://shadowmomo.github.io/rgss3-guide/first.html) ~ [返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/third.html)
+[上一节](https://shadowmomo.github.io/rgss3-guide/p/first.html) ~ [返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/p/third.html)
 
 Author: Shadow Momo
 Last Modified: 2014/6/27 13:26:35 
