@@ -1,16 +1,19 @@
 # 预备部分 #
-[返回目录](https://#/) ~ [下一节](https://#/)
+[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/second.html)
 
 ---
-- 我自认为已经掌握了《RGSS 3 入门教程大家写》的大部分内容，可不可以测试一下我的掌握程度？我应该回去巩固基础还是在这里继续学习？
-> ~~学无止境。~~这个直接找人出一套测试题吧~
+- 我自认为已经掌握了《[RGSS3 入门教程大家写](http://rm.66rpg.com/thread-249826-1-1.html)》的大部分内容，可不可以测试一下我的掌握程度？我应该回去巩固基础还是在这里继续学习？
+> 学无止境。但是我们也提供了一套简单的[自测题](https://shadowmomo.github.io/rgss3-guide/self-exam.html)。
+
+- 我一点基础也没有，可以从这里开始学习吗？
+> 当然。你也可以和《[RGSS3 入门教程大家写](http://rm.66rpg.com/thread-249826-1-1.html)》的内容同步学习，两相印证。如果有什么问题欢迎来[6R的VA区](http://rm.66rpg.com/forum-320-1.html)提问，@taroxd 和@喵呜喵5 和@moy 和@余烬之中 和@所有人 都会很乐意帮助你的。
 
 - 当我见到看不懂的代码时，我应该依次到哪里寻求帮助？
 > 当你读其他的脚本，遇到了不懂的地方，首先要确保**你大概了解了这个脚本的逻辑结构，可能你看不懂的原因是因为详细的内容在脚本的后面**。
 > 
 > 如果你只是对某句脚本的语法不大清楚，你应该自己猜想、尝试仿写一下，看看结果和你的预期有什么不同。
 > 
-> 有irb的开irb，没有irb开RM新工程也凑合，善用`p`、`msgbox`之类的方法，再不明白就勇敢的发帖提问，VA提问区或者技术讨论区（如果还在的话）都可以。
+> 有irb的开irb，没有irb开RM新工程也凑合，善用`p`、`msgbox`之类的方法，再不明白就勇敢的发帖提问，[VA提问区](http://rm.66rpg.com/forum-320-1.html)或者技术讨论区（如果还在的话）都可以。
 > 
 > 如果你对脚本中出现的某个方法不熟悉，你应该首先确定方法的位置：是在RGSS3中定义的，还是在ruby基本库中定义的？（有时候甚至是作者自己定义的）然后查找F1帮助手册（VA的帮助手册只汉化了脚本部分，不过基础部分与VX是共通的，而且对我们没有影响，可以在[这里](http://pan.baidu.com/s/1sjDF5U1)下载）。
 > 
@@ -99,7 +102,7 @@
 > ```
 
 ---
-[返回目录](https://#/) ~ [下一节](https://#/)
+[返回目录](https://shadowmomo.github.io/rgss3-guide/) ~ [下一节](https://shadowmomo.github.io/rgss3-guide/second.html)
 
 Author: Shadow Momo
 Last Modified: 2014/6/26 13:27:22 
